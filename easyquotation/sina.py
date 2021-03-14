@@ -10,12 +10,12 @@ class Sina(basequotation.BaseQuotation):
 
     max_num = 800
     grep_detail = re.compile(
-        r"(\d+)=[^\s]([^\s,]+?)%s%s"
-        % (r",([\.\d]+)" * 29, r",([-\.\d:]+)" * 2)
+        r"(\d+)=[^\s]([^\s,]+?)%s"
+        % (r",([-:\.\d]+)" * 31)
     )
     grep_detail_with_prefix = re.compile(
-        r"(\w{2}\d+)=[^\s]([^\s,]+?)%s%s"
-        % (r",([\.\d]+)" * 29, r",([-\.\d:]+)" * 2)
+        r"(\w{2}\d+)=[^\s]([^\s,]+?)%s"
+        % (r",([-:\.\d]+)" * 31)
     )
     del_null_data_stock = re.compile(
         r"(\w{2}\d+)=\"\";"
